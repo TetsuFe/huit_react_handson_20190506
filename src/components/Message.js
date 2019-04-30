@@ -6,21 +6,22 @@ export default class Message extends React.Component {
         const style = {
             "item": {
                 display: "flex",
-                alignItems: "flex-end",
+                alignItems: "flex-start",
                 marginBottom: "0.8em",
             },
             "itemImage": {
                 width: "100px",
-                objectFit: "contain",
+                height: "100px",
+                objectFit: "cover",
                 borderRadius: "20px",
-                verticalAlign: "top",
             },
             "itemName": {
+                textAlign: "left",
                 fontSize: "75%"
             },
             "itemMessage": {
                 position: "relative",
-                display: "inline - block",
+                display: "inline-block",
                 padding: "0.8em",
                 background: "#deefe8",
                 borderRadius: "4px",
