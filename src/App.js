@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { firebaseDb } from './firebase/index.js'
 import Message from './components/Message.js'
@@ -6,7 +6,7 @@ import ChatForm from './components/ChatForm.js'
 
 const messages = firebaseDb.collection('messages')
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.onTextChange = this.onTextChange.bind(this)
@@ -27,7 +27,6 @@ class App extends Component {
         querySnapshot.forEach((doc) => {
           // 新しい順に取得される
           const m = doc.data();
-          console.log(m)
           msgs.push({
             'text': m.text,
             'user_name': m.user_name,
